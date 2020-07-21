@@ -7,9 +7,6 @@
 class Company:
     def name(self,name):
         return name
-# c = Company()
-# c.name = "sfdsfdsfs"
-# print(c.name)
 ## End question 1
 
 # Question 2: Write a class Travel which is a subclass of Company (Travel inherits
@@ -19,7 +16,15 @@ class Company:
 # anyone created a Travel object with no name, it should automatically
 # be set to Generic.
 ## Write your code below, variable lines ##
+class Travel(Company):
+    def __init__(self,name=''):
+        if name:
+            self.name = name
+        else:
+            self.name = "Generic"
 
+company_a = Travel('kajal')
+print(company_a.name)
 
 ## End question 2
 
@@ -57,51 +62,4 @@ class Company:
 # Company name: beverly hills
 ## Write your code below, 2 lines
 
-
 ##
-
-
-# class Travel:
-#     def name(self,name):
-#         self.name = name
-#         if name == None:
-#             self.name = None
-#         else:
-#             self.name = name
-
-# company_a = Company()
-# company_a.name = "School of Python"
-# print(company_a.name)
-
-# class Travel(Company):
-#     def __init__(name):
-#         if(name==None):
-#             Travel.name = "Generic"
-#         else:
-#             Travel.name = name
-#         return Travel.name
-# company_a = Travel()
-# # company_a.name = "School of Python"
-# print(company_a.name)
-
-
-class Company:
-    def name(self,name):
-        return (name)
-# Company_a = Company()
-# Company_a.name = "kajal"
-# print(Company_a.name)
-
-
-class Travel(Company):
-    def __init__(self,name=''):
-        if name:
-            self.name = name
-        else:
-            self.name = "Generic"
-
-company_a = Travel('kajal')
-print(company_a.name)
-        
-        
-
